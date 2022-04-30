@@ -1,5 +1,6 @@
 package com.example.examplemod;
 
+import com.example.examplemod.setup.Registration;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -25,6 +26,8 @@ public class ExampleMod {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public ExampleMod() {
+
+        Registration.register();
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the enqueueIMC method for modloading
