@@ -22,12 +22,11 @@ import java.util.stream.Collectors;
 @Mod(QuartaCInfMod.MOD_ID)
 public class QuartaCInfMod {
     public static final String MOD_ID = "quartacinfmod";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public QuartaCInfMod() {
-
         Registration.register();
+
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the enqueueIMC method for modloading
