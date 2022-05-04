@@ -2,9 +2,11 @@ package it.pr.itis.quartacinf.quartacinfmod.setup;
 
 import java.util.function.Supplier;
 import it.pr.itis.quartacinf.quartacinfmod.QuartaCInfMod;
+import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraft.world.level.block.Block;
@@ -13,6 +15,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import javax.annotation.Nullable;
 
 public class Registration {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(
@@ -42,6 +46,31 @@ public class Registration {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
     }
+
+
+    /**
+     * Initialize custom object & items START
+     */
+    public static final RegistryObject<Item> DIAMOND_NUGGET = ITEMS.register("diamond_nugget",
+            () -> new Item(new Item.Properties().tab(TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> GOD_EYE = ITEMS.register("god_eye",
+            () -> new BowItem(new Item.Properties().tab(TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> COAL_COKE = ITEMS.register("coal_coke",
+            () -> new Item(new Item.Properties().tab(TUTORIAL_TAB)) {
+                @Override
+                public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
+                    return 3200;
+                }
+            });
+
+
+    /**
+     * Initialize custom object & items END
+     */
+
+
 
     /**
      * Registra un nuovo blocco

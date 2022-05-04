@@ -1,4 +1,7 @@
 {
 	"item.quartacinfmod.icon_item": "Icon Item",
-	"itemGroup.quartacinfmod": "4C INF"
+	"itemGroup.quartacinfmod": "4C INF",
+	"item.quartacinfmod.diamond_nugget": "Diamond Nugget",
+	"item.quartacinfmod.god_eye": "God's Eye",
+	"item.quartacinfmod.coal_coke": "Coal Coke"
 }
