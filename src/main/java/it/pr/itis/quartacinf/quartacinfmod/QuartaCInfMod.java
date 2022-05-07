@@ -2,8 +2,13 @@ package it.pr.itis.quartacinf.quartacinfmod;
 
 import it.pr.itis.quartacinf.quartacinfmod.setup.Registration;
 import com.mojang.logging.LogUtils;
+import it.pr.itis.quartacinf.quartacinfmod.util.ModItemProperties;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -13,9 +18,15 @@ public class QuartaCInfMod {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public QuartaCInfMod() {
+        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         Registration.register();
+        eventBus.addListener(this::clientSetup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    private void clientSetup(final FMLClientSetupEvent event) {
+        ModItemProperties.addCustomItemProperties();
     }
 }
