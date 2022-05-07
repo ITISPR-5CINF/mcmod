@@ -1,6 +1,7 @@
 package it.pr.itis.quartacinf.quartacinfmod.register;
 
 import it.pr.itis.quartacinf.quartacinfmod.QuartaCInfMod;
+import it.pr.itis.quartacinf.quartacinfmod.setup.Registration;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -21,24 +22,20 @@ public class Blocks {
     public static final DeferredRegister<Item> ITEMS = Items.ITEMS;
 
     // REGISTRATION: Init
-    public static final RegistryObject<Block> NAPOLETANITE_ORE = registerBlock("napoletanite_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_CYAN)));
+    public static final RegistryObject<Block> NAPOLETANITE_ORE = register("napoletanite_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_CYAN)),
+            object -> () -> new Item(new Item.Properties().tab(Registration.CREATIVE_TAB)));
     // REGISTRATION: End
 
-    public static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<? extends T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        // Rompe tutto
-        /*
-        registerItem(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(TUTORIAL_TAB)));
-        */
-        return toReturn;
+    private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<? extends T> block) {
+        return BLOCKS.register(name, block);
     }
 
-    public static <T extends Block> RegistryObject<T> register(final String name, final Supplier<? extends T> block,
+    private static <T extends Block> RegistryObject<T> register(final String name, final Supplier<? extends T> block,
                                                                Function<RegistryObject<T>, Supplier<? extends Item>> item) {
         RegistryObject<T> obj = registerBlock(name, block);
-        return ITEMS.register(name, item.apply(obj)); //A>AAAAAAAAAAAAAAAA
+        ITEMS.register(name, item.apply(obj));
+        return obj;
     }
 
     /**
@@ -46,7 +43,9 @@ public class Blocks {
      * Registra l'event bus.
      * Questo metodo deve essere utilizzato solo dal construttore della mod.
      */
+
     public static void register(IEventBus modEventBus) {
         BLOCKS.register(modEventBus);
     }
+
 }
