@@ -1,4 +1,4 @@
-package it.pr.itis.quartacinf.quartacinfmod.setup;
+package it.pr.itis.quartacinf.quartacinfmod.register;
 
 import java.util.function.Supplier;
 import it.pr.itis.quartacinf.quartacinfmod.QuartaCInfMod;
@@ -18,9 +18,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import javax.annotation.Nullable;
 
-public class Registration {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(
-            ForgeRegistries.BLOCKS, QuartaCInfMod.MOD_ID);
+public class Items {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(
             ForgeRegistries.ITEMS, QuartaCInfMod.MOD_ID);
 
@@ -37,20 +35,7 @@ public class Registration {
         }
     };
 
-    /**
-     * NON USARE!
-     * Registra tutti i blocchi e gli oggetti.
-     * Questo metodo deve essere utilizzato solo dal construttore della mod.
-     */
-    public static void register(IEventBus modEventBus) {
-        ITEMS.register(modEventBus);
-        BLOCKS.register(modEventBus);
-    }
-
-    /**
-     * Initialize custom object & items START
-     */
-
+    // REGISTRATION: Init
     // Miscellaneous
     public static final RegistryObject<Item> DIAMOND_NUGGET = registerItem("diamond_nugget",
             () -> new Item(new Item.Properties().tab(CREATIVE_TAB)));
@@ -68,9 +53,6 @@ public class Registration {
 
     // Napoli
     //FACCIAMO RINASCERE LA SCARRAFONE MODE #PISTOLENELLAFENDI
-    public static final RegistryObject<Block> NAPOLETANITE_ORE = registerBlock("napoletanite_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_CYAN)));
-
     public static final RegistryObject<Item> NAPOLETANITE = registerItem("napoletanite",
             () -> new Item(new Item.Properties().tab(CREATIVE_TAB)));
 
@@ -93,29 +75,7 @@ public class Registration {
     public static final RegistryObject<Item> NAPOLETANITE_SHOVEL = registerItem("napoletanite_shovel",
             () -> new ShovelItem(ModTier.NAPOLETANITE_TIER, 0, 2.8f,
                     new Item.Properties().tab(CREATIVE_TAB)));
-
-    /**
-     * Initialize custom object & items END
-     */
-
-
-
-    /**
-     * Registra un nuovo blocco
-     * @param name nome del blocco
-     * @param block oggetto Block
-     * @return
-     * @param <T>
-     */
-    public static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        // Rompe tutto
-        /*
-        registerItem(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(TUTORIAL_TAB)));
-        */
-        return toReturn;
-    }
+    // REGISTRATION: END
 
     /**
      * Registra un nuovo elemento
@@ -124,7 +84,16 @@ public class Registration {
      * @return
      * @param <T>
      */
-    private static <T extends Item> RegistryObject<T> registerItem(final String name, final Supplier<T> item) {
+    public static <T extends Item> RegistryObject<T> registerItem(final String name, final Supplier<T> item) {
         return ITEMS.register(name, item);
+    }
+
+    /**
+     * NON USARE!
+     * Registra l'event bus.
+     * Questo metodo deve essere utilizzato solo dal construttore della mod.
+     */
+    public static void register(IEventBus modEventBus) {
+        ITEMS.register(modEventBus);
     }
 }

@@ -3,5 +3,12 @@
 	"itemGroup.quartacinfmod": "4C INF",
 	"item.quartacinfmod.diamond_nugget": "Diamond Nugget",
 	"item.quartacinfmod.god_eye": "God's Eye",
-	"item.quartacinfmod.coal_coke": "Coal Coke"
+	"item.quartacinfmod.coal_coke": "Coal Coke",
+	"item.quartacinfmod.napoletanite": "Napoletanite",
+	"item.quartacinfmod.napoletanite_ore": "Neapolitan Ore",
+	"item.quartacinfmod.napoletanite_pickaxe": "Neapolitan Pickaxe",
+	"item.quartacinfmod.napoletanite_axe": "Neapolitan Axe",
+	"item.quartacinfmod.napoletanite_sword": "Neapolitan Sword",
+	"item.quartacinfmod.napoletanite_shovel": "Neapolitan Shovel",
+	"item.quartacinfmod.napoletanite_hoe": "Neapolitan Hoe"
 }
