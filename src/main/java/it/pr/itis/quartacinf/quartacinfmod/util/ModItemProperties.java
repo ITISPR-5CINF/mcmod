@@ -1,14 +1,14 @@
 package it.pr.itis.quartacinf.quartacinfmod.util;
 
 
-import it.pr.itis.quartacinf.quartacinfmod.setup.Registration;
+import it.pr.itis.quartacinf.quartacinfmod.register.Items;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 
 public class ModItemProperties {
     public static void addCustomItemProperties() {
-        makeBow(Registration.GOD_EYE.get());
+        makeBow(Items.GOD_EYE.get());
     }
 
     private static void makeBow(Item item) {

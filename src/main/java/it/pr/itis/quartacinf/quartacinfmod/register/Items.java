@@ -5,12 +5,8 @@ import it.pr.itis.quartacinf.quartacinfmod.QuartaCInfMod;
 import it.pr.itis.quartacinf.quartacinfmod.util.ModTier;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -54,6 +50,9 @@ public class Items {
     // Napoli
     //FACCIAMO RINASCERE LA SCARRAFONE MODE #PISTOLENELLAFENDI
     public static final RegistryObject<Item> NAPOLETANITE = registerItem("napoletanite",
+            () -> new Item(new Item.Properties().tab(CREATIVE_TAB)));
+
+    public static final RegistryObject<Item> NAPOLETANITE_WATCH = registerItem("napoletanite_watch",
             () -> new Item(new Item.Properties().tab(CREATIVE_TAB)));
 
     public static final RegistryObject<Item> NAPOLETANITE_PICKAXE = registerItem("napoletanite_pickaxe",

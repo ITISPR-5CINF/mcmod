@@ -2,12 +2,7 @@ package it.pr.itis.quartacinf.quartacinfmod.setup;
 
 import java.util.function.Supplier;
 import it.pr.itis.quartacinf.quartacinfmod.QuartaCInfMod;
-import it.pr.itis.quartacinf.quartacinfmod.util.ModTier;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraft.world.level.block.Block;
@@ -48,73 +43,14 @@ public class Registration {
     }
 
     /**
-     * Initialize custom object & items START
-     */
-
-    // Miscellaneous
-    public static final RegistryObject<Item> DIAMOND_NUGGET = registerItem("diamond_nugget",
-            () -> new Item(new Item.Properties().tab(CREATIVE_TAB)));
-
-    public static final RegistryObject<Item> GOD_EYE = registerItem("god_eye",
-            () -> new BowItem(new Item.Properties().tab(CREATIVE_TAB)));
-
-    public static final RegistryObject<Item> COAL_COKE = registerItem("coal_coke",
-            () -> new Item(new Item.Properties().tab(CREATIVE_TAB)) {
-                @Override
-                public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
-                    return 3200;
-                }
-            });
-
-    // Napoli
-    //FACCIAMO RINASCERE LA SCARRAFONE MODE #PISTOLENELLAFENDI
-    public static final RegistryObject<Block> NAPOLETANITE_ORE = registerBlock("napoletanite_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_CYAN)));
-
-    public static final RegistryObject<Item> NAPOLETANITE = registerItem("napoletanite",
-            () -> new Item(new Item.Properties().tab(CREATIVE_TAB)));
-
-    public static final RegistryObject<Item> NAPOLETANITE_PICKAXE = registerItem("napoletanite_pickaxe",
-            () -> new PickaxeItem(ModTier.NAPOLETANITE_TIER, 1, 2.2f,
-                    new Item.Properties().tab(CREATIVE_TAB)));
-
-    public static final RegistryObject<Item> NAPOLETANITE_SWORD = registerItem("napoletanite_sword",
-            () -> new SwordItem(ModTier.NAPOLETANITE_TIER, 3, 1.6f,
-                    new Item.Properties().tab(CREATIVE_TAB)));
-
-    public static final RegistryObject<Item> NAPOLETANITE_AXE = registerItem("napoletanite_axe",
-            () -> new AxeItem(ModTier.NAPOLETANITE_TIER, 5, 1f,
-                    new Item.Properties().tab(CREATIVE_TAB)));
-
-    public static final RegistryObject<Item> NAPOLETANITE_HOE = registerItem("napoletanite_hoe",
-            () -> new HoeItem(ModTier.NAPOLETANITE_TIER, 0, 4f,
-                    new Item.Properties().tab(CREATIVE_TAB)));
-
-    public static final RegistryObject<Item> NAPOLETANITE_SHOVEL = registerItem("napoletanite_shovel",
-            () -> new ShovelItem(ModTier.NAPOLETANITE_TIER, 0, 2.8f,
-                    new Item.Properties().tab(CREATIVE_TAB)));
-
-    /**
-     * Initialize custom object & items END
-     */
-
-
-
-    /**
      * Registra un nuovo blocco
      * @param name nome del blocco
      * @param block oggetto Block
      * @return
      * @param <T>
      */
-    public static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        // Rompe tutto
-        /*
-        registerItem(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(TUTORIAL_TAB)));
-        */
-        return toReturn;
+    private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<? extends T> block) {
+        return BLOCKS.register(name, block);
     }
 
     /**

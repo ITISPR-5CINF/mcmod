@@ -2,8 +2,10 @@ package it.pr.itis.quartacinf.quartacinfmod.register;
 
 import it.pr.itis.quartacinf.quartacinfmod.QuartaCInfMod;
 import it.pr.itis.quartacinf.quartacinfmod.setup.Registration;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
@@ -23,8 +25,9 @@ public class Blocks {
 
     // REGISTRATION: Init
     public static final RegistryObject<Block> NAPOLETANITE_ORE = register("napoletanite_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_CYAN)),
-            object -> () -> new Item(new Item.Properties().tab(Registration.CREATIVE_TAB)));
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_CYAN).strength(1.0f)
+                    .sound(SoundType.ANVIL).requiresCorrectToolForDrops()),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Registration.CREATIVE_TAB)));
     // REGISTRATION: End
 
     private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<? extends T> block) {

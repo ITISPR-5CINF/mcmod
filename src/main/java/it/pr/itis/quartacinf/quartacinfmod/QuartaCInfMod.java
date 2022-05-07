@@ -20,8 +20,8 @@ public class QuartaCInfMod {
 
     public QuartaCInfMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        Blocks.register(eventBus);
-        Items.register(eventBus);
+        Blocks.BLOCKS.register(eventBus);
+        Items.ITEMS.register(eventBus);
         eventBus.addListener(this::clientSetup);
 
         // Register ourselves for server and other game events we are interested in
