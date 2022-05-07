@@ -2,10 +2,7 @@ package it.pr.itis.quartacinf.quartacinfmod.setup;
 
 import java.util.function.Supplier;
 import it.pr.itis.quartacinf.quartacinfmod.QuartaCInfMod;
-import net.minecraft.world.item.BowItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -64,8 +61,6 @@ public class Registration {
                     return 3200;
                 }
             });
-
-
     /**
      * Initialize custom object & items END
      */

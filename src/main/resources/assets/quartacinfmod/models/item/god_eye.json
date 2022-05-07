@@ -71,7 +71,7 @@
     }
   },
   "textures": {
-    "layer0": "quartacinfmod:item/god_eye_pulling_0"
+    "layer0": "quartacinfmod:item/god_eye"
   },
   "overrides": [
     {

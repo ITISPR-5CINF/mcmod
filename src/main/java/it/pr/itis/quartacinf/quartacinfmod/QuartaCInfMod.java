@@ -2,6 +2,9 @@ package it.pr.itis.quartacinf.quartacinfmod;
 
 import it.pr.itis.quartacinf.quartacinfmod.setup.Registration;
 import com.mojang.logging.LogUtils;
+import it.pr.itis.quartacinf.quartacinfmod.util.ModItemProperties;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import org.slf4j.Logger;
@@ -17,5 +20,9 @@ public class QuartaCInfMod {
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    private void clientSetup(final FMLClientSetupEvent event) {
+        ModItemProperties.addCustomItemProperties();
     }
 }

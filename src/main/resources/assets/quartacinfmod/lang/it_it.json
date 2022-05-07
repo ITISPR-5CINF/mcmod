@@ -1,4 +1,7 @@
 {
 	"item.quartacinfmod.icon_item": "Oggetto icona",
-	"itemGroup.quartacinfmod": "4C INF"
+	"itemGroup.quartacinfmod": "4C INF",
+	"item.quartacinfmod.diamond_nugget": "Pepita di Diamante",
+	"item.quartacinfmod.god_eye": "Occhio di Dio",
+	"item.quartacinfmod.coal_coke": "Carbon Coca"
 }
