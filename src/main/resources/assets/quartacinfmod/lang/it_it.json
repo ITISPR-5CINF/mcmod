@@ -5,12 +5,13 @@
 	"item.quartacinfmod.god_eye": "Occhio di Dio",
 	"item.quartacinfmod.coal_coke": "Carbon Coca",
 	"item.quartacinfmod.napoletanite": "Napoletanite",
-	"item.quartacinfmod.napoletanite_ore": "Napoletanite Grezza",
 	"item.quartacinfmod.napoletanite_pickaxe": "Piccone Napoletano",
 	"item.quartacinfmod.napoletanite_axe": "Ascia Napoletana",
 	"item.quartacinfmod.napoletanite_sword": "Spada Napoletana",
 	"item.quartacinfmod.napoletanite_shovel": "Pala Napoletana",
 	"item.quartacinfmod.napoletanite_hoe": "Zappa Napoletana",
 	"item.quartacinfmod.napoletanite_watch": "Orologio Napoletano",
-	"block.quartacinfmod.napoletanite_ore": "Napoletanite Grezza"
+	"block.quartacinfmod.napoletanite_ore": "Napoletanite Grezza",
+	"item.quartacinfmod.tarantella_napoletana": "Tarantella Napoletana",
+	"item.quartacinfmod.tarantella_napoletana.desc": "UEEEEE UAJOOOOOO FORZA NAPOLIIIIIIIII"
 }
