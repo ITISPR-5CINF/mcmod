@@ -2,7 +2,7 @@ package it.pr.itis.quartacinf.quartacinfmod;
 
 import it.pr.itis.quartacinf.quartacinfmod.register.Blocks;
 import it.pr.itis.quartacinf.quartacinfmod.register.Items;
-import it.pr.itis.quartacinf.quartacinfmod.setup.Registration;
+import it.pr.itis.quartacinf.quartacinfmod.register.ModSounds;
 import com.mojang.logging.LogUtils;
 import it.pr.itis.quartacinf.quartacinfmod.util.ModItemProperties;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,8 +20,11 @@ public class QuartaCInfMod {
 
     public QuartaCInfMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
         Blocks.BLOCKS.register(eventBus);
         Items.ITEMS.register(eventBus);
+        ModSounds.SOUNDS.register(eventBus);
+
         eventBus.addListener(this::clientSetup);
 
         // Register ourselves for server and other game events we are interested in
