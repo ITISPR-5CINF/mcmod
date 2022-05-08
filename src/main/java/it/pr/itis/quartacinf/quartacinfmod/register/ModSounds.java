@@ -16,8 +16,8 @@ public class ModSounds {
         return SOUNDS.register(name, () -> new SoundEvent(new ResourceLocation(QuartaCInfMod.MOD_ID, name)));
     }
 
-    private static void register(IEventBus event) {
-        SOUNDS.register(event);
+    private static void register(IEventBus eventBus) {
+        SOUNDS.register(eventBus);
     }
 
     public static final RegistryObject<SoundEvent> TARANTELLA_NAPOLETANA = registerSoundEvent("tarantella_music");

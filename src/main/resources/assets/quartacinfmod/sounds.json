@@ -2,7 +2,7 @@
   "tarantella_music": {
     "sounds": [
       {
-        "name": "quartacinfmod:sounds/tarantella_music",
+        "name": "quartacinfmod:tarantella_music",
         "stream": true
       }
     ]
