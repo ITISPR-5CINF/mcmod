@@ -5,12 +5,13 @@
 	"item.quartacinfmod.god_eye": "God's Eye",
 	"item.quartacinfmod.coal_coke": "Coal Coke",
 	"item.quartacinfmod.napoletanite": "Napoletanite",
-	"item.quartacinfmod.napoletanite_ore": "Neapolitan Ore",
 	"item.quartacinfmod.napoletanite_pickaxe": "Neapolitan Pickaxe",
 	"item.quartacinfmod.napoletanite_axe": "Neapolitan Axe",
 	"item.quartacinfmod.napoletanite_sword": "Neapolitan Sword",
 	"item.quartacinfmod.napoletanite_shovel": "Neapolitan Shovel",
 	"item.quartacinfmod.napoletanite_hoe": "Neapolitan Hoe",
 	"item.quartacinfmod.napoletanite_watch": "Neapolitan Watch",
-	"block.quartacinfmod.napoletanite_ore": "Napoletanite Ore"
+	"block.quartacinfmod.napoletanite_ore": "Napoletanite Ore",
+	"item.quartacinfmod.tarantella_music_disc": "Tarantella Napoletana",
+	"item.quartacinfmod.tarantella_music_disc.desc": "UEEEEEE UAJOOOOOO FORZA NAPOLIIIIIIIII"
 }

@@ -1,0 +1,10 @@
+{
+  "tarantella_music": {
+    "sounds": [
+      {
+        "name": "quartacinfmod:tarantella_music",
+        "stream": true
+      }
+    ]
+  }
+}

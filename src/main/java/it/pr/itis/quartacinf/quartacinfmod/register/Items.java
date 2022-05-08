@@ -6,8 +6,6 @@ import it.pr.itis.quartacinf.quartacinfmod.setup.Registration;
 import it.pr.itis.quartacinf.quartacinfmod.util.ModTier;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -46,6 +44,10 @@ public class Items {
 
     public static final RegistryObject<Item> NAPOLETANITE_WATCH = registerItem("napoletanite_watch",
             () -> new Item(new Item.Properties().tab(Registration.CREATIVE_TAB)));
+
+    public static final RegistryObject<Item> TARANTELLA_MUSIC_DISC = registerItem("tarantella_music_disc",
+            () -> new RecordItem(4, ModSounds.TARANTELLA_NAPOLETANA,
+                    new Item.Properties().tab(Registration.CREATIVE_TAB).stacksTo(1)));
 
     public static final RegistryObject<Item> NAPOLETANITE_PICKAXE = registerItem("napoletanite_pickaxe",
             () -> new PickaxeItem(ModTier.NAPOLETANITE_TIER, 1, 2.2f,
