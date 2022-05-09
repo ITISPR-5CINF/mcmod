@@ -3,6 +3,7 @@ package it.pr.itis.quartacinf.quartacinfmod.register;
 import java.util.function.Supplier;
 import it.pr.itis.quartacinf.quartacinfmod.QuartaCInfMod;
 import it.pr.itis.quartacinf.quartacinfmod.util.ModTier;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -48,6 +49,8 @@ public class Items {
 
     // Napoli
     //FACCIAMO RINASCERE LA SCARRAFONE MODE #PISTOLENELLAFENDI
+
+    // RANDOM ITEMS
     public static final RegistryObject<Item> NAPOLETANITE = registerItem("napoletanite",
             () -> new Item(new Item.Properties().tab(CREATIVE_TAB)));
 
@@ -57,6 +60,11 @@ public class Items {
     public static final RegistryObject<Item> TARANTELLA_MUSIC_DISC = registerItem("tarantella_music_disc",
             () -> new RecordItem(4, ModSounds.TARANTELLA_NAPOLETANA,
                     new Item.Properties().tab(CREATIVE_TAB).stacksTo(1)));
+
+    public static final RegistryObject<Item> NAPOLETANITE_INGOT = registerItem("napoletanite_ingot",
+            () -> new Item(new Item.Properties().tab(CREATIVE_TAB)));
+
+    // BASICS ITEMS
 
     public static final RegistryObject<Item> NAPOLETANITE_PICKAXE = registerItem("napoletanite_pickaxe",
             () -> new PickaxeItem(ModTier.NAPOLETANITE_TIER, 1, 2.2f,
@@ -77,6 +85,28 @@ public class Items {
     public static final RegistryObject<Item> NAPOLETANITE_SHOVEL = registerItem("napoletanite_shovel",
             () -> new ShovelItem(ModTier.NAPOLETANITE_TIER, 0, 2.8f,
                     new Item.Properties().tab(CREATIVE_TAB)));
+
+
+
+
+    // ARMOR
+
+    public static final RegistryObject<Item> NAPOLETANITE_HELMET = registerItem("napoletanite_helmet",
+            () -> new ArmorItem(ModArmorMaterials.NAPOLETANITE, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(CREATIVE_TAB)));
+
+    public static final RegistryObject<Item> NAPOLETANITE_CHESTPLATE = registerItem("napoletanite_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.NAPOLETANITE, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(CREATIVE_TAB)));
+
+    public static final RegistryObject<Item> NAPOLETANITE_LEGGINGS = registerItem("napoletanite_leggings",
+            () -> new ArmorItem(ModArmorMaterials.NAPOLETANITE, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(CREATIVE_TAB)));
+
+    public static final RegistryObject<Item> NAPOLETANITE_BOOTS = registerItem("napoletanite_boots",
+            () -> new ArmorItem(ModArmorMaterials.NAPOLETANITE, EquipmentSlot.FEET,
+                    new Item.Properties().tab(CREATIVE_TAB)));
+
     // REGISTRATION: END
 
     /**
