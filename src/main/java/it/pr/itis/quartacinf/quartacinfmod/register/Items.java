@@ -113,6 +113,9 @@ public class Items {
             () -> new RecordItem(4, ModSounds.INNO_NAPOLI,
                     new Item.Properties().tab(CREATIVE_TAB).stacksTo(1)));
 
+    public static final RegistryObject<Item> PASTIERA = registerItem("pastiera",
+            () -> new Item(new Item.Properties().tab(CREATIVE_TAB).food(ModFoods.PASTIERA)));
+
     // REGISTRATION: END
 
     /**
