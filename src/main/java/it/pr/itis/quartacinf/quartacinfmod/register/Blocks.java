@@ -22,7 +22,7 @@ public class Blocks {
 
     // REGISTRATION: Init
     public static final RegistryObject<Block> NAPOLETANITE_ORE = registerItemBlock("napoletanite_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_CYAN).strength(1.0f)
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_CYAN).strength(5.0f)
                     .sound(SoundType.ANVIL).requiresCorrectToolForDrops()),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Items.CREATIVE_TAB)));
     // REGISTRATION: End
