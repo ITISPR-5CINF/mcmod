@@ -14,5 +14,13 @@
         "stream": true
       }
     ]
+  },
+  "inno_napoli_music": {
+    "sounds": [
+      {
+        "name": "quartacinfmod:inno_napoli_music",
+        "stream": true
+      }
+    ]
   }
 }

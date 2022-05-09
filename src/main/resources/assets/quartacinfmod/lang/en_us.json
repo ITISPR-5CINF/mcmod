@@ -7,7 +7,7 @@
 	"item.quartacinfmod.god_eye": "God's Eye",
 	"item.quartacinfmod.coal_coke": "Coal Coke",
 	"item.quartacinfmod.napoletanite": "Napoletanite",
-	"item.quartacinfmod.napoletanite_watch": "Neapolitan Watch",
+	"block.quartacinfmod.napoletanite_ore": "Napoletanite Ore",
 
 	"item.quartacinfmod.napoletanite_pickaxe": "Neapolitan Pickaxe",
 	"item.quartacinfmod.napoletanite_axe": "Neapolitan Axe",
@@ -15,14 +15,16 @@
 	"item.quartacinfmod.napoletanite_shovel": "Neapolitan Shovel",
 	"item.quartacinfmod.napoletanite_hoe": "Neapolitan Hoe",
 
-	"block.quartacinfmod.napoletanite_ore": "Napoletanite Ore",
 	"item.quartacinfmod.tarantella_music_disc": "Tarantella Napoletana",
 	"item.quartacinfmod.tarantella_music_disc.desc": "UEEEEEE UAJOOOOOO FORZA NAPOLIIIIIIIII",
 	"item.quartacinfmod.funiculi_funicula_music_disc": "Funiculì funiculà",
 	"item.quartacinfmod.funiculi_funicula_music_disc.desc": "UEEEEEE UAJOOOOOO FORZA NAPOLIIIIIIIII",
+	"item.quartacinfmod.inno_napoli_music_disc": "SSC Napoli Anthem",
+	"item.quartacinfmod.inno_napoli_music_disc.desc": "UEEEEEE UAJOOOOOO FORZA NAPOLIIIIIIIII",
 
 	"item.quartacinfmod.napoletanite_helmet": "Neapolitan Helmet",
 	"item.quartacinfmod.napoletanite_chestplate": "Neapolitan Chestplate",
 	"item.quartacinfmod.napoletanite_leggings": "Neapolitan Leggings",
-	"item.quartacinfmod.napoletanite_boots": "Neapolitan Boots"
+	"item.quartacinfmod.napoletanite_boots": "Neapolitan Boots",
+	"item.quartacinfmod.napoletanite_watch": "Neapolitan Watch"
 }

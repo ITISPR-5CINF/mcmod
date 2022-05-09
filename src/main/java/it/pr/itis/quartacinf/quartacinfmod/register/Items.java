@@ -109,6 +109,10 @@ public class Items {
             () -> new RecordItem(4, ModSounds.FUNICULI_FUNICULA,
                     new Item.Properties().tab(CREATIVE_TAB).stacksTo(1)));
 
+    public static final RegistryObject<Item> INNO_NAPOLI_MUSIC_DISC = registerItem("inno_napoli_music_disc",
+            () -> new RecordItem(4, ModSounds.INNO_NAPOLI,
+                    new Item.Properties().tab(CREATIVE_TAB).stacksTo(1)));
+
     // REGISTRATION: END
 
     /**

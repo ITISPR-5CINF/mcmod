@@ -13,6 +13,7 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> TARANTELLA_NAPOLETANA = registerSoundEvent("tarantella_music");
     public static final RegistryObject<SoundEvent> FUNICULI_FUNICULA = registerSoundEvent("funiculi_funicula_music");
+    public static final RegistryObject<SoundEvent> INNO_NAPOLI = registerSoundEvent("inno_napoli_music");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUNDS.register(name, () -> new SoundEvent(new ResourceLocation(QuartaCInfMod.MOD_ID, name)));
