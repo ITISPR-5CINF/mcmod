@@ -11,8 +11,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    NAPOLETANITE("napoletanite", 74, new int[]{6, 12, 10, 6}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 4.0F, 0.0F, () -> {
-        return Ingredient.of(Items.NAPOLETANITE.get());
+    NAPOLETANITE("napoletanite", 74, new int[]{10, 14, 18, 10}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 4.0F, 0.0F, () -> {
+        return Ingredient.of(Items.NAPOLETANITE_INGOT.get());
     });
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
