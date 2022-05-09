@@ -1,17 +1,26 @@
 {
 	"item.quartacinfmod.icon_item": "Oggetto icona",
 	"itemGroup.quartacinfmod": "4C INF",
+
 	"item.quartacinfmod.diamond_nugget": "Pepita di Diamante",
+	"item.quartacinfmod.napoletanite_ingot": "Napoletanite Ingot",
 	"item.quartacinfmod.god_eye": "Occhio di Dio",
 	"item.quartacinfmod.coal_coke": "Carbon Coca",
 	"item.quartacinfmod.napoletanite": "Napoletanite",
+	"item.quartacinfmod.napoletanite_watch": "Orologio Napoletano",
+
 	"item.quartacinfmod.napoletanite_pickaxe": "Piccone Napoletano",
 	"item.quartacinfmod.napoletanite_axe": "Ascia Napoletana",
 	"item.quartacinfmod.napoletanite_sword": "Spada Napoletana",
 	"item.quartacinfmod.napoletanite_shovel": "Pala Napoletana",
 	"item.quartacinfmod.napoletanite_hoe": "Zappa Napoletana",
-	"item.quartacinfmod.napoletanite_watch": "Orologio Napoletano",
+
 	"block.quartacinfmod.napoletanite_ore": "Napoletanite Grezza",
-	"item.quartacinfmod.tarantella_napoletana": "Tarantella Napoletana",
-	"item.quartacinfmod.tarantella_napoletana.desc": "UEEEEE UAJOOOOOO FORZA NAPOLIIIIIIIII"
+	"item.quartacinfmod.tarantella_music_disc": "Tarantella Napoletana",
+	"item.quartacinfmod.tarantella_music_disc.desc": "UEEEEEE UAJOOOOOO FORZA NAPOLIIIIIIIII",
+
+	"item.quartacinfmod.napoletanite_helmet": "Elmetto Napoletano",
+	"item.quartacinfmod.napoletanite_chestplate": "Corazza Napoletana",
+	"item.quartacinfmod.napoletanite_leggings": "Leggings Napoletani",
+	"item.quartacinfmod.napoletanite_boots": "Stivali Napoletani"
 }
