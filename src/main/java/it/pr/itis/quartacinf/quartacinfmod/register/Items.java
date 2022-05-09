@@ -64,7 +64,7 @@ public class Items {
                     new Item.Properties().tab(CREATIVE_TAB)));
 
     public static final RegistryObject<Item> NAPOLETANITE_SWORD = registerItem("napoletanite_sword",
-            () -> new SwordItem(ModTier.NAPOLETANITE_TIER, 3, 1.6f,
+            () -> new SwordItem(ModTier.NAPOLETANITE_SWORD_TIER, 10, 2.0f,
                     new Item.Properties().tab(CREATIVE_TAB)));
 
     public static final RegistryObject<Item> NAPOLETANITE_AXE = registerItem("napoletanite_axe",
