@@ -20,10 +20,8 @@ public class Blocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(
             ForgeRegistries.BLOCKS, QuartaCInfMod.MOD_ID);
 
-    public static final DeferredRegister<Item> ITEMS = Items.ITEMS;
-
     // REGISTRATION: Init
-    public static final RegistryObject<Block> NAPOLETANITE_ORE = register("napoletanite_ore",
+    public static final RegistryObject<Block> NAPOLETANITE_ORE = registerItemBlock("napoletanite_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_CYAN).strength(1.0f)
                     .sound(SoundType.ANVIL).requiresCorrectToolForDrops()),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Items.CREATIVE_TAB)));
@@ -33,10 +31,10 @@ public class Blocks {
         return BLOCKS.register(name, block);
     }
 
-    private static <T extends Block> RegistryObject<T> register(final String name, final Supplier<? extends T> block,
-                                                               Function<RegistryObject<T>, Supplier<? extends Item>> item) {
+    private static <T extends Block> RegistryObject<T> registerItemBlock(final String name, final Supplier<? extends T> block,
+                                                                         Function<RegistryObject<T>, Supplier<? extends Item>> item) {
         RegistryObject<T> obj = registerBlock(name, block);
-        ITEMS.register(name, item.apply(obj));
+        Items.registerItem(name, item.apply(obj));
         return obj;
     }
 
@@ -45,9 +43,7 @@ public class Blocks {
      * Registra l'event bus.
      * Questo metodo deve essere utilizzato solo dal construttore della mod.
      */
-
     public static void register(IEventBus modEventBus) {
         BLOCKS.register(modEventBus);
     }
-
 }

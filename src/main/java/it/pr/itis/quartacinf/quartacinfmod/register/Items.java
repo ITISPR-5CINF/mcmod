@@ -23,6 +23,7 @@ public class Items {
     public static final RegistryObject<Item> ICON_ITEM = registerItem("icon_item",
             () -> new Item(new Item.Properties()));
 
+    // La tab nel menu di creativa dedicata ai nostri item custom
     public static final CreativeModeTab CREATIVE_TAB = new CreativeModeTab(QuartaCInfMod.MOD_ID) {
         @Override
         @OnlyIn(Dist.CLIENT)
@@ -32,6 +33,7 @@ public class Items {
     };
 
     // REGISTRATION: Init
+
     // Miscellaneous
     public static final RegistryObject<Item> DIAMOND_NUGGET = registerItem("diamond_nugget",
             () -> new Item(new Item.Properties().tab(CREATIVE_TAB)));
@@ -48,24 +50,15 @@ public class Items {
             });
 
     // Napoli
-    //FACCIAMO RINASCERE LA SCARRAFONE MODE #PISTOLENELLAFENDI
-
-    // RANDOM ITEMS
+    // FACCIAMO RINASCERE LA SCARRAFONE MODE #PISTOLENELLAFENDI
+    // BASIC ITEMS
     public static final RegistryObject<Item> NAPOLETANITE = registerItem("napoletanite",
             () -> new Item(new Item.Properties().tab(CREATIVE_TAB)));
-
-    public static final RegistryObject<Item> NAPOLETANITE_WATCH = registerItem("napoletanite_watch",
-            () -> new Item(new Item.Properties().tab(CREATIVE_TAB)));
-
-    public static final RegistryObject<Item> TARANTELLA_MUSIC_DISC = registerItem("tarantella_music_disc",
-            () -> new RecordItem(4, ModSounds.TARANTELLA_NAPOLETANA,
-                    new Item.Properties().tab(CREATIVE_TAB).stacksTo(1)));
 
     public static final RegistryObject<Item> NAPOLETANITE_INGOT = registerItem("napoletanite_ingot",
             () -> new Item(new Item.Properties().tab(CREATIVE_TAB)));
 
-    // BASICS ITEMS
-
+    // BASICS TOOLS
     public static final RegistryObject<Item> NAPOLETANITE_PICKAXE = registerItem("napoletanite_pickaxe",
             () -> new PickaxeItem(ModTier.NAPOLETANITE_TIER, 1, 2.2f,
                     new Item.Properties().tab(CREATIVE_TAB)));
@@ -86,11 +79,7 @@ public class Items {
             () -> new ShovelItem(ModTier.NAPOLETANITE_TIER, 0, 2.8f,
                     new Item.Properties().tab(CREATIVE_TAB)));
 
-
-
-
     // ARMOR
-
     public static final RegistryObject<Item> NAPOLETANITE_HELMET = registerItem("napoletanite_helmet",
             () -> new ArmorItem(ModArmorMaterials.NAPOLETANITE, EquipmentSlot.HEAD,
                     new Item.Properties().tab(CREATIVE_TAB)));
@@ -106,6 +95,19 @@ public class Items {
     public static final RegistryObject<Item> NAPOLETANITE_BOOTS = registerItem("napoletanite_boots",
             () -> new ArmorItem(ModArmorMaterials.NAPOLETANITE, EquipmentSlot.FEET,
                     new Item.Properties().tab(CREATIVE_TAB)));
+
+    // CUSTOM ARMOR
+    public static final RegistryObject<Item> NAPOLETANITE_WATCH = registerItem("napoletanite_watch",
+            () -> new Item(new Item.Properties().tab(CREATIVE_TAB)));
+
+    // MUSIC DISCS
+    public static final RegistryObject<Item> TARANTELLA_MUSIC_DISC = registerItem("tarantella_music_disc",
+            () -> new RecordItem(4, ModSounds.TARANTELLA_NAPOLETANA,
+                    new Item.Properties().tab(CREATIVE_TAB).stacksTo(1)));
+
+    public static final RegistryObject<Item> FUNICULI_FUNICULA_MUSIC_DISC = registerItem("funiculi_funicula_music_disc",
+            () -> new RecordItem(4, ModSounds.FUNICULI_FUNICULA,
+                    new Item.Properties().tab(CREATIVE_TAB).stacksTo(1)));
 
     // REGISTRATION: END
 
@@ -128,6 +130,4 @@ public class Items {
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
     }
-
-
 }

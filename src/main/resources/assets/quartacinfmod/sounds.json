@@ -1,4 +1,12 @@
 {
+  "funiculi_funicula_music": {
+    "sounds": [
+      {
+        "name": "quartacinfmod:funiculi_funicula_music",
+        "stream": true
+      }
+    ]
+  },
   "tarantella_music": {
     "sounds": [
       {

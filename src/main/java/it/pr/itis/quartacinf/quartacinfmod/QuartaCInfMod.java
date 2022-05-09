@@ -21,9 +21,9 @@ public class QuartaCInfMod {
     public QuartaCInfMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        Blocks.BLOCKS.register(eventBus);
-        Items.ITEMS.register(eventBus);
-        ModSounds.SOUNDS.register(eventBus);
+        Blocks.register(eventBus);
+        Items.register(eventBus);
+        ModSounds.register(eventBus);
 
         eventBus.addListener(this::clientSetup);
 
