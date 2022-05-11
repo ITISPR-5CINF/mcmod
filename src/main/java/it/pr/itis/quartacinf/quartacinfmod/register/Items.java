@@ -60,7 +60,7 @@ public class Items {
 
     // BASICS TOOLS
     public static final RegistryObject<Item> NAPOLETANITE_PICKAXE = registerItem("napoletanite_pickaxe",
-            () -> new PickaxeItem(ModTier.NAPOLETANITE_TIER, 1, 2.2f,
+            () -> new PickaxeItem(ModTier.NAPOLETANITE_PICKAXE_TIER, 1, 2.2f,
                     new Item.Properties().tab(CREATIVE_TAB)));
 
     public static final RegistryObject<Item> NAPOLETANITE_SWORD = registerItem("napoletanite_sword",
@@ -113,6 +113,7 @@ public class Items {
             () -> new RecordItem(4, ModSounds.INNO_NAPOLI,
                     new Item.Properties().tab(CREATIVE_TAB).stacksTo(1)));
 
+    // FOOD
     public static final RegistryObject<Item> PASTIERA = registerItem("pastiera",
             () -> new Item(new Item.Properties().tab(CREATIVE_TAB).food(ModFoods.PASTIERA)));
 
@@ -130,9 +131,9 @@ public class Items {
     }
 
     /**
-     * NON USARE!
-     * Registra l'event bus.
-     * Questo metodo deve essere utilizzato solo dal construttore della mod.
+     * DON'T USE IT!
+     * It register the event bus.
+     * This method must be used only by the constructor of the mod.
      */
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

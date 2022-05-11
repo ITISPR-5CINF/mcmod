@@ -15,6 +15,7 @@ import org.slf4j.Logger;
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(QuartaCInfMod.MOD_ID)
 public class QuartaCInfMod {
+
     public static final String MOD_ID = "quartacinfmod";
     public static final Logger LOGGER = LogUtils.getLogger();
 

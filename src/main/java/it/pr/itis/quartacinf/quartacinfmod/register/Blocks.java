@@ -17,6 +17,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class Blocks {
+
+    // This method is used to contain every registration of object Block to maintain a simpler registration at the end
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(
             ForgeRegistries.BLOCKS, QuartaCInfMod.MOD_ID);
 
@@ -27,10 +29,12 @@ public class Blocks {
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Items.CREATIVE_TAB)));
     // REGISTRATION: End
 
+    // This method is used to register blocks
     private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<? extends T> block) {
         return BLOCKS.register(name, block);
     }
 
+    // This method is used to register ItemBLocks
     private static <T extends Block> RegistryObject<T> registerItemBlock(final String name, final Supplier<? extends T> block,
                                                                          Function<RegistryObject<T>, Supplier<? extends Item>> item) {
         RegistryObject<T> obj = registerBlock(name, block);
@@ -39,9 +43,9 @@ public class Blocks {
     }
 
     /**
-     * NON USARE!
-     * Registra l'event bus.
-     * Questo metodo deve essere utilizzato solo dal construttore della mod.
+     * DON'T USE IT!
+     * It register the event bus.
+     * This method must be used only by the constructor of the mod.
      */
     public static void register(IEventBus modEventBus) {
         BLOCKS.register(modEventBus);
