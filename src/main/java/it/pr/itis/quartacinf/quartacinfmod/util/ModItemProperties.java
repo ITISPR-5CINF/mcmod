@@ -6,11 +6,14 @@ import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 
+
+// This class contains the custom properties to animate items (in this case the bow)
 public class ModItemProperties {
     public static void addCustomItemProperties() {
         makeBow(Items.GOD_EYE.get());
     }
 
+    // bow animation (3 phases, specified in a JSON file)
     private static void makeBow(Item item) {
         ItemProperties.register(item, new ResourceLocation("pull"),
                 (p_174635_, p_174636_, p_174637_, p_174638_) -> {

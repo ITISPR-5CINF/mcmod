@@ -10,10 +10,17 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
+
+//This enum is used to give stats to the napoletanite_armor
 public enum ModArmorMaterials implements ArmorMaterial {
-    NAPOLETANITE("napoletanite", 74, new int[]{10, 14, 18, 10}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 4.0F, 0.0F, () -> {
-        return Ingredient.of(Items.NAPOLETANITE_INGOT.get());
-    });
+
+    // enum for napoletanite armor (those parameters without a name are not mapped, but they are assigned in the constructor
+    NAPOLETANITE("napoletanite", 74, new int[]{10, 14, 18, 10}, //this int array gives the stats at the various part of the armor in the sequel order {boots, leggings, chest-plate, helmet}
+            10, // Used to set the enchantment value of the armor
+            SoundEvents.ARMOR_EQUIP_DIAMOND, // This is used to set the SoundEvent when you wear the armor
+            4.0F, // used to set the toughness of the armor
+            0.0F, // used to set the knockback resistance of the armor
+            () -> { return Ingredient.of(Items.NAPOLETANITE_INGOT.get()); }); // a lambda used to get the ingredient used to repair it
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final String name;
@@ -25,7 +32,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     private final float knockbackResistance;
     private final LazyLoadedValue<Ingredient> repairIngredient;
 
-    private ModArmorMaterials(String p_40474_, int p_40475_, int[] p_40476_, int p_40477_, SoundEvent p_40478_, float p_40479_, float p_40480_, Supplier<Ingredient> p_40481_) {
+    ModArmorMaterials(String p_40474_, int p_40475_, int[] p_40476_, int p_40477_, SoundEvent p_40478_, float p_40479_, float p_40480_, Supplier<Ingredient> p_40481_) {
         this.name = p_40474_;
         this.durabilityMultiplier = p_40475_;
         this.slotProtections = p_40476_;
