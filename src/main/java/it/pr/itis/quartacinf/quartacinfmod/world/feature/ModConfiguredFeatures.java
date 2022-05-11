@@ -10,6 +10,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguratio
 
 import java.util.List;
 
+// This class is used to generate the features to give to blocks, because they'll be generated in the overworld
 public class ModConfiguredFeatures {
     public static final List<OreConfiguration.TargetBlockState> OVERWORLD_NAPOLETANITE_ORES = List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, Blocks.NAPOLETANITE_ORE.get().defaultBlockState()));
