@@ -19,6 +19,7 @@ public class ModTier {
             10.0f, 25, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NAPOLETANITE_INGOT.get()));
 
     //stats for napoletanite_pickaxe
-    public static final ForgeTier NAPOLETANITE_PICKAXE_TIER = new ForgeTier(9, 5000, 50.0f, 5.0f, 10, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NAPOLETANITE_INGOT.get()));
+    public static final ForgeTier NAPOLETANITE_PICKAXE_TIER = new ForgeTier(9, 5000, 50.0f,
+            5.0f, 10, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NAPOLETANITE_INGOT.get()));
 
 }

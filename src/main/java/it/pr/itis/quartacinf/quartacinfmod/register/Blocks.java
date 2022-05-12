@@ -27,6 +27,12 @@ public class Blocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_CYAN).strength(5.0f)
                     .sound(SoundType.ANVIL).requiresCorrectToolForDrops()),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Items.CREATIVE_TAB)));
+
+    public static final RegistryObject<Block> COAL_COKE_ORE = registerItemBlock("coal_coke_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_GRAY).strength(3.5f)
+                    .sound(SoundType.BAMBOO).requiresCorrectToolForDrops()),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Items.CREATIVE_TAB)));
+
     // REGISTRATION: End
 
     // This method is used to register blocks

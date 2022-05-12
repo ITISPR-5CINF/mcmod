@@ -18,4 +18,11 @@ public class ModConfiguredFeatures {
 
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> NAPOLETANITE_ORE = FeatureUtils.register("napoletanite_ore",
             Feature.ORE, new OreConfiguration(OVERWORLD_NAPOLETANITE_ORES, 9));
+
+    public static final List<OreConfiguration.TargetBlockState> OVERWORLD_COAL_COKE_ORES = List.of(
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, Blocks.COAL_COKE_ORE.get().defaultBlockState()),
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, Blocks.COAL_COKE_ORE.get().defaultBlockState()));
+
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> COAL_COKE_ORE = FeatureUtils.register("napoletanite_ore",
+            Feature.ORE, new OreConfiguration(OVERWORLD_COAL_COKE_ORES, 6));
 }
