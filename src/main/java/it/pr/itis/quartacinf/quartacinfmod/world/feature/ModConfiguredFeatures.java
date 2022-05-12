@@ -13,7 +13,8 @@ import java.util.List;
 // This class is used to generate the features to give to blocks, because they'll be generated in the overworld
 public class ModConfiguredFeatures {
     public static final List<OreConfiguration.TargetBlockState> OVERWORLD_NAPOLETANITE_ORES = List.of(
-            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, Blocks.NAPOLETANITE_ORE.get().defaultBlockState()));
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, Blocks.NAPOLETANITE_ORE.get().defaultBlockState()),
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, Blocks.NAPOLETANITE_ORE.get().defaultBlockState()));
 
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> NAPOLETANITE_ORE = FeatureUtils.register("napoletanite_ore",
             Feature.ORE, new OreConfiguration(OVERWORLD_NAPOLETANITE_ORES, 9));
