@@ -6,6 +6,7 @@ import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
+// This class is used to put veins in a specific level of the world (Y - axes) -> // VerticalAnchor.aboveBottom(level);
 public class ModPlacedFeatures
 {
     public static final Holder<PlacedFeature> NAPOLETANITE_ORE_PLACED = PlacementUtils.register("napoletanite_ore_placed",
