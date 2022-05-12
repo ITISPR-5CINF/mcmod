@@ -7,6 +7,10 @@ This file is meant to describe our ideas and what we'll do:
 - update textures for blocks; X
 - update textures for NAPOLETANITE_ARMOR pieces; X
 - try to add a new mob (f.e. an evil villager that steal things from your inventory, if possible; else think something); X
+- add tomato_crop for tomatoes; X
+- add mozzarella; X
+- add impasto; X
+- add pizza (tomato, mozzarella, impasto); X
 
 IF YOU HAVE ANY IDEA ADD IT HERE. :)
 
