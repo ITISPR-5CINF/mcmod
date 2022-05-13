@@ -15,8 +15,7 @@ public class ModConfiguredFeatures {
     public static final List<OreConfiguration.TargetBlockState> OVERWORLD_NAPOLETANITE_ORES = List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, Blocks.NAPOLETANITE_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, Blocks.NAPOLETANITE_ORE.get().defaultBlockState()));
-
-    // this will
+    
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> NAPOLETANITE_ORE = FeatureUtils.register("napoletanite_ore",
             Feature.ORE, new OreConfiguration(OVERWORLD_NAPOLETANITE_ORES, 9));
 
