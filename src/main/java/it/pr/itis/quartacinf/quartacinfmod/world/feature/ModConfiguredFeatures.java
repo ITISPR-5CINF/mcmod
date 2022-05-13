@@ -24,6 +24,6 @@ public class ModConfiguredFeatures {
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, Blocks.COAL_COKE_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, Blocks.COAL_COKE_ORE.get().defaultBlockState()));
 
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> COAL_COKE_ORE = FeatureUtils.register("napoletanite_ore",
-            Feature.ORE, new OreConfiguration(OVERWORLD_COAL_COKE_ORES, 6));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> COAL_COKE_ORE = FeatureUtils.register("coal_coke_ore",
+            Feature.ORE, new OreConfiguration(OVERWORLD_COAL_COKE_ORES, 25));
 }
