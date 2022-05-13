@@ -32,7 +32,7 @@ public class ModSounds {
 
     /**
      * DON'T USE IT!
-     * It register the event bus.
+     * It registers the event bus.
      * This method must be used only by the constructor of the mod.
      */
     public static void register(IEventBus eventBus) {
