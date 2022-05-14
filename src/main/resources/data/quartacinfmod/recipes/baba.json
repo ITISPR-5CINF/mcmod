@@ -3,7 +3,7 @@
   "pattern": [
     "###",
     "///",
-    "***"
+    "###"
   ],
   "key": {
     "#": {
@@ -11,9 +11,6 @@
     },
     "/": {
       "item": "minecraft:sugar"
-    },
-    "*": {
-      "item": "minecraft:egg"
     }
   },
   "result": {
