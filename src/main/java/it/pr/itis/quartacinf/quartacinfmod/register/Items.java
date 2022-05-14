@@ -8,6 +8,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -116,6 +117,13 @@ public class Items {
     // FOOD
     public static final RegistryObject<Item> PASTIERA = registerItem("pastiera",
             () -> new Item(new Item.Properties().tab(CREATIVE_TAB).food(ModFoods.PASTIERA)));
+
+    public static final RegistryObject<Item> BABA = registerItem("baba",
+            () -> new Item(new Item.Properties().tab(CREATIVE_TAB).food(ModFoods.BABA)));
+
+    // SPAWN EGG
+    public static final RegistryObject<ForgeSpawnEggItem> MARADONA_SPAWN_EGG = registerItem("maradona_spawn_egg",
+            () -> new ForgeSpawnEggItem(Entity.MARADONA, 0x99CBFF, 0xFFFFFF, new Item.Properties().tab(CREATIVE_TAB)));
 
     // REGISTRATION: END
 

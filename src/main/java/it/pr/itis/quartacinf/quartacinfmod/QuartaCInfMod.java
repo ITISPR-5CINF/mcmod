@@ -1,6 +1,7 @@
 package it.pr.itis.quartacinf.quartacinfmod;
 
 import it.pr.itis.quartacinf.quartacinfmod.register.Blocks;
+import it.pr.itis.quartacinf.quartacinfmod.register.Entity;
 import it.pr.itis.quartacinf.quartacinfmod.register.Items;
 import it.pr.itis.quartacinf.quartacinfmod.register.ModSounds;
 import com.mojang.logging.LogUtils;
@@ -25,6 +26,7 @@ public class QuartaCInfMod {
         Blocks.register(eventBus);
         Items.register(eventBus);
         ModSounds.register(eventBus);
+        Entity.register(eventBus);
 
         eventBus.addListener(this::clientSetup);
 
