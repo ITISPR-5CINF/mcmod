@@ -32,6 +32,6 @@
 	"item.quartacinfmod.pastiera": "Neapolitan Pastiera",
 	"item.quartacinfmod.baba": "Neapolitan Baba",
 
-	"entity.quartacinfmod.maradona" : "maradona",
-	"item.quartacinfmod.maradona_spawn_egg" : "maradona_spawn_egg"
+	"entity.quartacinfmod.maradona" : "Maradona",
+	"item.quartacinfmod.maradona_spawn_egg" : "Maradona Spawn Egg"
 }
